@@ -10,6 +10,27 @@ const howToplay = document.querySelector(".howtoplay-div");
 const animation = document.querySelector(".animation");
 const howToPlayWindow = document.querySelector(".main .howtoplay");
 const creatorBtn = document.querySelector(".creator-btn");
+const languages=document.querySelectorAll(".language-icon");
+
+
+const setLanguage=thislang=>{
+  let text=document.getElementById("coming-soon");
+  languages.forEach(lang=>lang.classList.remove("active"));
+  thislang.classList.add("active");
+  if(thislang.getAttribute("id")=="tr"){
+    text.classList.add("active");
+    setTimeout(()=>{
+      text.classList.remove("active");
+      document.getElementById("tr").classList.remove("active");
+      document.getElementById("en").classList.add("active");
+    },2000);
+  }
+} 
+
+languages.forEach(lang=>{
+  lang.addEventListener("click",()=>{setLanguage(lang)})
+})
+
 let hiddenTimer=0;
 let word = "hello";
 let row = 0
@@ -24,6 +45,7 @@ infoText.innerHTML = "Type the word and press enter";
 page.style.opacity=1;
 
 howToplay.addEventListener("click",()=>{
+  howToplay.classList.toggle("clicked");
   howToPlayWindow.classList.toggle("active");
   howToPlayWindow.classList.remove("first");
   if(howToPlayWindow.classList.contains("active")){

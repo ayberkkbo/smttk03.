@@ -71,22 +71,78 @@ html,body{
   margin-right: 10px;
 }
 
-.header .settings-icon{
+.header .lang-wrapper{
+  display: flex;
+  position: relative;
+  align-items: center;
+  
+}
+
+.header .language-icon{
   cursor: pointer;
   transition: all 0.1s ease-in-out;
+  width: 30px;
+  border-radius: 100%;
+  margin:0 10px;
+  transition: all 0.2s ease;
 }
+
+.header .language-icon.active{
+  border:2px solid rgb(255, 255, 255);
+  transform: scale(1.5);
+}
+
+.header .language-icon:hover{
+  opacity: 0.6;
+}
+
+.relative{
+  position: relative;
+}
+
+#coming-soon{
+  color:white;
+  font-size: 0.8rem;
+  left:-150px;
+  top: 30px;
+  position: absolute;
+  width: 12rem;
+  transition: all 2s ease;
+}
+
+#coming-soon:not(.active){
+  opacity: 0;
+
+}
+
+#coming-soon.active{
+  opacity: 1;
+}
+
 
 .header .howtoplay-div{
   display: flex;
   align-items: center;
   gap:5px;
   cursor: pointer;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.header .howtoplay-div:hover,
-.header .settings-icon:hover{
-  transform: scale(1.1);
+.header .howtoplay-div:not(.clicked) p{
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+}
+.header .howtoplay-div.clicked p{
+  color: #f69191;
+  font-size: 1.3rem;
+  transition: all 0.5s ease;
+}
+
+
+
+.header .howtoplay-div:hover{
+  opacity: 0.6;
 }
 
 
@@ -174,7 +230,7 @@ html,body{
   align-items: center;
   width: 400px;
   transition: opacity 1s ease-in-out;
-  z-index:2;
+  z-index: 2  ;
 }
 
 .key{
