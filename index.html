@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordle Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+ <div class="page">
+  <div class="header">
+    <span class="logo">Wordle</span>
+    <div class="right">
+      <div class="howtoplay-div">
+        <p>How to play</p>
+        <img src="icons/questionicon.png" alt="icon" class="howto-icon">
+      </div>
+      <img src="icons/settingsicon.png" alt="icon" class="settings-icon">
+      <button class="creator-btn">Samet Talha Kizildag</button>
+    </div>
+  </div>
+  
+  <div class="main">
+    <div class="main-wrapper">
+      <p class="info-text"></p>
+      <div class="wrapper">
+        <div class="score-page">
+          <p></p>
+        </div>
+        <div class="howtoplay first">
+          <div class="row"><div class="yellow">Y</div><p>Letter is true but in wrong position</p></div>
+          <div class="row"><div class="red">R</div><p>Word does not include this letter</p></div>
+          <div class="row"><div class="green">G</div><p>Letter and position are both correct </p></div>
+        </div>
+        <div class="animation">
+        </div>
+        <div class="gameboard"></div>
+      </div>
+      <div class="keys">
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div ">Type the word and press enter</div>
+  </div>
+ </div>
+</body>
+<script src="script.js"></script>
+</html>
