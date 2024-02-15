@@ -1,6 +1,6 @@
 const wordlisturl="wordlist.txt";
 let userWord="";
-const letters = 'a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.Delete.u.v.w.x.y.z.Enter'.split('.');
+const letters = 'q.w.e.r.t.y.g.u.i.o.p.a.s.d.f.g.h.j.k.l.Delete.z.x.c.v.b.n.m.Enter'.split('.');
 const gameBoard = document.querySelector(".gameboard");
 const infoText = document.querySelector(".info-text");
 const scorePage = document.querySelector(".main .wrapper .score-page");
